@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="img/icon.png" rel="shortcut icon" type="image/png" />
+
+  <title>Bilberry</title>
+
+  <link href="css/swiper.css" rel="stylesheet" />
+  <link href="css/bootstrap.css" rel="stylesheet" />
+
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/font-awesome.css" rel="stylesheet" />
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  
+</head>
+<body>
+
+  <section class="mobile-nav">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#bilberry">Bilberry</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#aboutUs">О нас</a></li>
+            <li><a href="#lastProjects">Портфолио</a></li>
+            <li><a href="#happyClients">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </section>
+
+  <section id="bilberry" class="bilberry">
+
+    <header class="site-header">
+      <div class="logo">
+        <a href="#bilberry" id="home">Bilberry</a>
+      </div>
+      <nav class="main-nav">
+        <a href="#aboutUs">О нас</a>
+        <a href="#lastProjects">Портфолио</a>
+        <a href="#happyClients">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="content bilberry-content">
+
+      <div class="bilberry-content-heading">Bilberry</div>
+      <div class="bilberry-content-subeading">Организация корпоративных мероприятий</div>
+      <a class="bilberry-content-toOrder" onclick="$('#order-modal').show()">Заказать мероприятие</a>
+
+      <div class="order-modal" id="order-modal">
+
+        <form class="order-form" id="order-form" method="POST">
+          <span onclick="$('#order-modal').hide()" class="order-close" title="Закрыть окно">×</span>
+          <div class="order-inputs-wrapper">
+            <label for="name" class="order-labels">Контактное имя*</label><br />
+            <input type="text" name="name" placeholder="Имя" title="Пример: Анастасия" class="order-inputs" id="name" required /><br />
+            <label for="phone" class="order-labels">Контактный телефон*</label><br />
+            <input type="tel" name="phone" placeholder="+38 000 000-00-00" title="Пример: +38 000 000-00-00" class="order-inputs" id="phone" required /><br />
+            <label for="email" class="order-labels">E-mail</label><br />
+            <input type="email" name="email" placeholder="E-mail" title="Пример: e-mail@mail.com" class="order-inputs" id="email" />
+            <p class="order-notice">Поля, помеченные *, являются обязательными для заполнения.</p>
+          </div>
+          <div class="order-buttons">
+            <button type="button" onclick="$('#order-modal').hide()" class="order-cancel">Отмена</button>
+            <button type="submit" class="order-submit" id="order-submit">Ок</button>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="response-modal">
+        <span onclick="$('#order-modal').hide()" class="order-close" title="Закрыть окно">×</span>
+        <div class="response-wrapper">
+          <p class="response-text"></p>
+          <button type="button" class="order-submit" id="responseOK">Ок</button>
+        </div>
+      </div>
+
+    </section>
+
+  </section>
+
+  <section id="aboutUs" class="aboutUs">
+
+    <section class="content aboutUs-content">
+
+      <div class="aboutUs-content-heading">
+        <h3><a href="#aboutUs">Немного о нас</a></h3>
+      </div>
+      <div class="aboutUs-content-subheading">
+        <p>Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов.</p>
+      </div>
+      <div class="aboutUs-content-tabs">
+          <a class="aboutUs-content-tabInfo-carousel-btn" id="hrEvents">HR мероприятия</a>
+          <a class="aboutUs-content-tabInfo-carousel-btn" id="festivals">Фестивали</a>
+          <a class="aboutUs-content-tabInfo-carousel-btn" id="shows">Выставки</a>
+          <div class="carousel-underline" id="carousel-underline"></div>
+      </div>
+
+      <div class="aboutUs-content-tabInfo">
+
+        <div class="aboutUs-content-tabInfo-carousel-item" id="carousel-item1">
+          <div class="aboutUs-content-tabInfo-image">
+            <img src="img/aboutUs1.jpg" />
+          </div>
+          <div class="aboutUs-content-tabInfo-text">
+            <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+            <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности. Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+          </div>
+        </div>
+        <div class="aboutUs-content-tabInfo-carousel-item" id="carousel-item2">
+          <div class="aboutUs-content-tabInfo-image">
+            <img src="img/aboutUs2.jpg" />
+          </div>
+          <div class="aboutUs-content-tabInfo-text">
+            <p>HR включает в себя много других функций: мотивация, обучение, развитие персонала, корпоративная культура и развитие HR-бренда.</p>
+            <p>Важной функцией мероприятий является формирование корпоративной культуры отношения сотрудников к бренду, продукции, компании. Такое корпоративное событие поможет сплотить коллектив, установить неформальные связи, не просто повысить лояльность сотрудников, а сделать их адвокатами бренда.</p>
+          </div>
+        </div>
+        <div class="aboutUs-content-tabInfo-carousel-item" id="carousel-item3">
+          <div class="aboutUs-content-tabInfo-image">
+            <img src="img/aboutUs3.jpg" />
+          </div>
+          <div class="aboutUs-content-tabInfo-text">
+            <p>Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов.</p>
+            <p>Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов. Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов. Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="aboutUs-mobile-tabs">
+        
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="title">HR мероприятия</div>
+              <div class="content-wrapper">
+                <div class="image">
+                  <img src="img/aboutUs1.jpg" />
+                </div>
+                <div class="text">
+                  <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+                  <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности. Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">Фестивали</div>
+              <div class="content-wrapper">
+                <div class="image">
+                  <img src="img/aboutUs2.jpg" />
+                </div>
+                <div class="text">
+                  <p>HR включает в себя много других функций: мотивация, обучение, развитие персонала, корпоративная культура и развитие HR-бренда.</p>
+                  <p>Важной функцией мероприятий является формирование корпоративной культуры отношения сотрудников к бренду, продукции, компании. Такое корпоративное событие поможет сплотить коллектив, установить неформальные связи, не просто повысить лояльность сотрудников, а сделать их адвокатами бренда.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">Выставки</div>
+              <div class="content-wrapper">
+                <div class="image">
+                  <img src="img/aboutUs3.jpg" />
+                </div>
+                <div class="text">
+                  <p>Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов.</p>
+                  <p>Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов. Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов. Мы кампания, занимающаяся проведением ивентов разных направлений. Опыт на рынке состоявляет около 8 лет. Около 150 постоянных, всегда довольных клиентов.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+  <section id="lastProjects" class="lastProjects">
+
+    <section class="content lastProjects-content">
+
+      <header class="lastProjects-content-header">
+        <div class="lastProjects-content-header-headings">
+          <p><a href="#lastProjects">Последние проекты</a></p>
+          <p>Несколько последних крупных проектов, проведенных нашей кампанией.</p>
+        </div>
+        <div class="lastProjects-content-header-toOrder2">
+          <a onclick="document.getElementById('order-modal').style.display='block'">Заказать мероприятие</a>
+        </div>
+      </header>
+
+      <div class="lastProjects-content-preview">
+
+        <div class="lastProjects-content-preview-cities">
+          <div class="lastProjects-content-preview-cities-img readMore-modal-dialog-desctop">
+            <img src="img/oceanPlazaKiev.jpg">
+          </div>
+          <div class="lastProjects-content-preview-cities-text">
+            <p>Ocean Plaza, Киев</p>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+          </div>
+          <div class="lastProjects-content-preview-cities-readMore readMore-modal-dialog-desctop" id="readMore1">
+            <span>Открыть статью об ивенте</span>
+            <span><i class="fa fa-caret-up fa-rotate-90"></i></span>
+          </div>
+
+          <div id="more" class="lastProjects-content-preview-cities-more">
+            <span id="close">&times;</span>
+            <a>
+              <img src="img/bilberry.jpg" /> 
+            </a>
+            <div id="caption" class="lastProjects-content-preview-cities-more-text">
+              <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+              <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+              <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+              <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+              <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lastProjects-content-preview-cities">
+          <div class="lastProjects-content-preview-cities-img readMore-modal-dialog-desctop">
+            <img src="img/oceanPlazaKharkov.jpg">
+          </div>
+          <div class="lastProjects-content-preview-cities-text">
+            <p>Ocean Plaza, Харьков</p>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Харьковского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+          </div>
+          <div class="lastProjects-content-preview-cities-readMore readMore-modal-dialog-desctop" id="readMore2">
+            <span>Открыть статью об ивенте</span>
+            <span><i class="fa fa-caret-up fa-rotate-90"></i></span>
+          </div>
+        </div>
+
+        <div class="lastProjects-content-preview-cities">
+          <div class="lastProjects-content-preview-cities-img readMore-modal-dialog-desctop">
+            <img src="img/oceanPlazaLvov.jpg">
+          </div>
+          <div class="lastProjects-content-preview-cities-text">
+            <p>Ocean Plaza, Львов</p>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Львовского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+          </div>
+          <div class="lastProjects-content-preview-cities-readMore readMore-modal-dialog-desctop" id="readMore3">
+            <span>Открыть статью об ивенте</span>
+            <span><i class="fa fa-caret-up fa-rotate-90"></i></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="lastProjects-content-preview-mobile">
+
+        <div class="swiper-container-cities">
+          <div class="swiper-wrapper swiper-cities">
+
+            <div class="swiper-slide swiper-slide-cities">
+              <div class="lastProjects-content-preview-cities">
+                <div class="lastProjects-content-preview-cities-img readMore-modal-dialog-mobile">
+                  <img src="img/oceanPlazaKiev.jpg">
+                </div>
+                <div class="lastProjects-content-preview-cities-text">
+                  <p>Ocean Plaza, Киев</p>
+                  <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+                </div>
+
+                <div class="lastProjects-content-preview-cities-readMore readMore-modal-dialog-mobile">
+                  <span>Открыть статью об ивенте</span>
+                  <span><i class="fa fa-caret-up fa-rotate-90"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-cities">
+              <div class="lastProjects-content-preview-cities">
+                <div class="lastProjects-content-preview-cities-img readMore-modal-dialog-mobile">
+                  <img src="img/oceanPlazaKharkov.jpg">
+                </div>
+                <div class="lastProjects-content-preview-cities-text">
+                  <p>Ocean Plaza, Харьков</p>
+                  <p>HR мероприятие кампании Logitec о формировании нового штата для Харьковского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+                </div>
+                <div class="lastProjects-content-preview-cities-readMore readMore-modal-dialog-mobile">
+                  <span>Открыть статью об ивенте</span>
+                  <span><i class="fa fa-caret-up fa-rotate-90"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-cities">
+              <div class="lastProjects-content-preview-cities">
+                <div class="lastProjects-content-preview-cities-img readMore-modal-dialog-mobile">
+                  <img src="img/oceanPlazaLvov.jpg">
+                </div>
+                <div class="lastProjects-content-preview-cities-text">
+                  <p>Ocean Plaza, Львов</p>
+                  <p>HR мероприятие кампании Logitec о формировании нового штата для Львовского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+                </div>
+                <div class="lastProjects-content-preview-cities-readMore readMore-modal-dialog-mobile">
+                  <span>Открыть статью об ивенте</span>
+                  <span><i class="fa fa-caret-up fa-rotate-90"></i></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pagination-cities"></div>
+
+        </div>
+
+        <div class="mobile-readMore-wrapper" id="moreMobile">
+          <span id="closeMobile">&times;</span>
+          <a href="img/bilberry.jpg" target="_blank">
+            <img src="img/bilberry.jpg" /> 
+          </a>
+          <div>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+            <p>HR мероприятие кампании Logitec о формировании нового штата для Киевского офиса. Увлечение трафика клинтов. В соответствии с законом Ципфа, формирование имиджа специфицирует эмпирический рекламный макет.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+  <section id="happyClients" class="happyClients">
+
+    <section class="content happyClients-content">
+
+      <div class="happyClients-content-headings">
+        <p><a href="#happyClients">Наши счастливые клиенты</a></p>
+        <p>нам действительно важно ваше мнение о нас</p>
+      </div>
+
+      <div class="happyClients-content-wrap">
+
+        <div class="happyClients-content-client">
+          <div class="happyClients-content-client-img">
+            <img src="img/client1.jpg" />
+          </div>
+          <div class="happyClients-content-client-text">
+            <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+            <p>Сергей Сазонов, <span>юрист</span></p>
+          </div>
+        </div>
+
+        <div class="happyClients-content-client">
+          <div class="happyClients-content-client-img">
+            <img src="img/client2.jpg" />
+          </div>
+          <div class="happyClients-content-client-text">
+            <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+            <p>Ольга Буланова, <span>ведущий менеджер</span></p>
+          </div>
+        </div>
+
+        <div class="happyClients-content-client">
+          <div class="happyClients-content-client-img">
+            <img src="img/client3.jpg" />
+          </div>
+          <div class="happyClients-content-client-text">
+            <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+            <p>Константин Лобойченко, <span>директор</span></p>
+          </div>
+        </div>
+
+        <div class="happyClients-content-client">
+          <div class="happyClients-content-client-img">
+            <img src="img/client4.jpg" />
+          </div>
+          <div class="happyClients-content-client-text">
+            <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+            <p>Стас Марвин, <span>ведущий</span></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="happyClients-mobile-content-wrap">
+        
+        <div class="swiper-container-clients">
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide swiper-slide-clients">
+              <div class="happyClients-content-client">
+                <div class="happyClients-content-client-img">
+                  <img src="img/client1.jpg" />
+                </div>
+                <div class="happyClients-content-client-text">
+                  <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+                  <p>Сергей Сазонов, <span>юрист</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-clients">
+              <div class="happyClients-content-client">
+                <div class="happyClients-content-client-img">
+                  <img src="img/client2.jpg" />
+                </div>
+                <div class="happyClients-content-client-text">
+                  <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+                  <p>Ольга Буланова, <span>ведущий менеджер</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-clients">
+              <div class="happyClients-content-client">
+                <div class="happyClients-content-client-img">
+                  <img src="img/client3.jpg" />
+                </div>
+                <div class="happyClients-content-client-text">
+                  <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+                  <p>Константин Лобойченко, <span>директор</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-clients">
+              <div class="happyClients-content-client">
+                <div class="happyClients-content-client-img">
+                  <img src="img/client4.jpg" />
+                </div>
+                <div class="happyClients-content-client-text">
+                  <p>Инвестиционный продукт раскручивает пресс-клиппинг. Организация службы маркетинга откровенно цинична. По мнению ведущих маркетологов, общество потребления продуцирует мониторинг активности.</p>
+                  <p>Стас Марвин, <span>ведущий</span></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pagination-clients"></div>
+
+        </div>
+
+      </div>
+      
+    </section>
+
+  </section>
+
+  <section id="contacts" class="contacts">
+
+    <section class="content contacts-content">
+
+      <div class="contacts-content-headings">
+        <p><a href="#contacts">Контакты</a></p>
+        <p>оставьте ваши данные и мы с вами свяжемся</p>
+      </div>
+
+      <div class="contacts-content-wrap">
+
+        <div class="contacts-content-input">
+          <i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;</i>
+          <label for="callback-name"> Ваше Имя &nbsp;</label>
+          <input type="text" name="callback-name" id="callback-name" />
+        </div>
+
+        <div class="contacts-content-input">
+          <i class="fa fa-envelope" aria-hidden="true">&nbsp;&nbsp;</i>
+          <label for="callback-phone"> Ваш телефон &nbsp;</label>
+          <input type="phone" name="callback-phone" id="callback-phone" />
+        </div>
+
+        <a id="sendData">Отправить данные</a>
+
+      </div>
+      
+    </section>
+
+  </section>
+
+  <section class="map">
+
+    <section class="content content-map">
+      
+      <div class="adress">
+        <p class="adress-heading">Адреc</p>
+        <p class="adress-city">Город Харьков</p>
+        <p class="adress-street">Ул. Сумская 56</p>
+        <p class="adress-phone">Номер: (073) 464 27 33</p>
+        <p class="adress-email">bilberry123.com</p>
+      </div>
+
+      <footer class="footer">
+
+        <nav class="bottom-nav">
+          <a class="bottom-nav-link" href="#aboutUs">О нас</a>
+          <a class="bottom-nav-link" href="#lastProjects">Портфолио</a>
+          <a class="bottom-nav-link" href="#happyClients">Отзывы</a>
+          <a class="bottom-nav-link" href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="phone">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span>(073) 464 27 33</span>
+        </div>
+
+      </footer>
+
+    </section>
+
+  </section>
+
+  <script type="text/javascript" src="js/swiper.js"></script>
+
+  <script type="text/javascript">
+
+    var mySwiper = new Swiper('.swiper-container',{
+      pagination: '.pagination',
+      paginationClickable: true,
+      moveStartThreshold: 100,
+      autoplay: 2000,
+      autoplayStopOnLast: false,
+      loop: true
+    });
+
+    var mySwiperCities = new Swiper('.swiper-container-cities',{
+      pagination: '.pagination-cities',
+      paginationClickable: true,
+      moveStartThreshold: 100,
+      autoplay: 3000,
+      autoplayStopOnLast: false,
+      loop: true
+    });
+
+    var mySwiperClients = new Swiper('.swiper-container-clients',{
+      pagination: '.pagination-clients',
+      paginationClickable: true,
+      moveStartThreshold: 100,
+      autoplay: 2000,
+      autoplayStopOnLast: false,
+      loop: true
+    });
+
+    // for desctop mode
+
+    function stopMobileAutoplay() {
+      mySwiper.stopAutoplay();
+      mySwiperCities.stopAutoplay();
+      mySwiperClients.stopAutoplay();
+    }
+
+  </script>
+
+  <script type="text/javascript" src="js/logo_color_changing.js"></script>
+
+  <script type="text/javascript" src="js/modals.js"></script>
+
+  <script type="text/javascript" src="js/carousel.js"></script>
+
+  <script type="text/javascript" src="js/auto_hiding_navbar.js"></script>
+
+  <script type="text/javascript" src="js/order.js"></script>
+
+  <script type="text/javascript">
+    $(".navbar-fixed-top").autoHidingNavbar();
+  </script>
+
+  <script type="text/javascript">
+    
+    var $page = $('html, body');
+
+    $('a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 400);
+        return false;
+    });
+
+  </script>
+
+</body>
+</html>

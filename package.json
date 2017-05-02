@@ -1,0 +1,27 @@
+{
+  "name": "bilberry",
+  "version": "1.0.0",
+  "description": "commercial website",
+  "main": "app.js",
+  "engines": {
+    "node": "7.6.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "express": "^4.15.2",
+    "express-mongo-db": "^2.0.3",
+    "ip": "^1.1.5",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.4",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "bilberry"
+  ],
+  "author": "marty",
+  "license": "ISC"
+}
